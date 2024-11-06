@@ -3,10 +3,10 @@ const app = require('../app');
 
 describe('GET /horoscope', () => {
   it('should return zodiac sign for a valid date', async () => {
-    const res = await request(app).get('/horoscope?birthdate=1990-08-15');
+    const res = await request(app).get('/horoscope?birthdate=2000-11-24');
     expect(res.statusCode).toEqual(200);
     expect(res.body).toHaveProperty('sign');
-    expect(res.body.sign).toBe('Leo'); // August 15 is Leo
+    expect(res.body.sign).toBe('Sagittarius');
   });
 
   it('should return error for missing birthdate', async () => {
@@ -16,7 +16,7 @@ describe('GET /horoscope', () => {
   });
 
   it('should return error for invalid date format', async () => {
-    const res = await request(app).get('/horoscope?birthdate=15-08-1990');
+    const res = await request(app).get('/horoscope?birthdate=24-11-2000');
     expect(res.statusCode).toEqual(400);
     expect(res.body).toHaveProperty('error');
   });
