@@ -18,7 +18,7 @@ app.get('/horoscope', (req, res) => {
   const { birthdate } = req.query;
 
   // Regex to validate birthdate format (YYYY-MM-DD)
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  const dateRegex = /[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])/;
   if (!birthdate || !dateRegex.test(birthdate)) {
     return res.status(400).json({ error: 'Invalid or missing birthdate. Format should be YYYY-MM-DD' });
   }
