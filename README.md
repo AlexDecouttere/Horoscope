@@ -6,7 +6,6 @@ The Horoscope API is a simple Node.js and Express app that returns the zodiac si
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Running the Application](#running-the-application)
 - [Testing](#testing)
@@ -16,16 +15,11 @@ To install and run the Horoscope API locally:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/horoscope-app.git
+   git clone https://github.com/AlexDecouttere/Horoscope.git
    cd horoscope-app
 2. Install Dependencies
     ```bash
    npm install
-
-## Usage
-1. To start the application, run:
-    ```bash
-   node app.js
    
 ## API Endpoints
  Get Zodiac Sign
